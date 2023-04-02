@@ -26,6 +26,11 @@
   margin-right: -390%;
 }
 
+.roll{
+  margin-left: 72%;
+  margin-top: -%;
+}
+
 
 
 .active section {
@@ -605,7 +610,7 @@ img {
 
     width: 180px;
     margin-left: 28%;
-    margin-top: 153%;
+    margin-top: 183%;
   }
 
   .fin {
@@ -629,3 +634,5 @@ img {
   }
 
 }
+
+

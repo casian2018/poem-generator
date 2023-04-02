@@ -38,9 +38,9 @@ let thepoemidkurenameit = "";
 
 function generatePoem() {
   const apiUrl = 'https://api.openai.com/v1/completions';
-  const apiKey = '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';
+  const apiKey = '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';
 
-  const prompt = "Write a poetry about " + promptInput.value;
+  const prompt = "translate " + promptInput.value + " in english then make a poem in about 100 words";
   console.log(prompt)
   const payload = {
     model: "text-davinci-003",
@@ -142,7 +142,7 @@ function speach() {
     // speak the text
     speechSynthesis.speak(utterance);
   } else {
-    console.log("Sorry, the Web Speech API is not supported in your browser.");
+    console.log("Sorry, the Web Speech API is not supported in your browser.");
   }
 }
 
