@@ -12,9 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
-
-
 </head>
 
 <body class="">
@@ -34,20 +31,26 @@
   </header>
 
   <div class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5" class="box">
-      <section>
+    <section>
       <div class="w-full " class="box">
         <div class="topic">
           <input type="text" id="prompt" placeholder="  Write keyword + language">
+          <button id="roll-btn">🎲</button>
+
+
           <br>
           <button id="generate-btn" class="genpoem">Generate Poem</button>
           <div>
 
-            <div class="img"><center>
-              <img id="image" src="load.gif">
-              <br></center></div>
+            <div class="img">
+              <center>
+                <img id="image">
+                <br>
+              </center>
+            </div>
 
             <div>
-              <div id="poem-container"><br><br><br><br>This is where the poem will appear...<br><br><br><br></div>
+              <div id="poem-container"><br><br><br><br>Waiting for input ...<br><br><br><br></div>
             </div>
 
           </div>
@@ -58,24 +61,18 @@
             </div>
 
             <div class="inlinebtn">
-              <button id="save-txt-btn">Save as TXT</button>
+              <button id="save-txt-btn" src="">Save as TXT</button>
             </div>
-
-
           </div>
-
-          </form>
-
         </div>
     </section>
-    </div>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
-
+  </div>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=XXXXXXXX"></script>
 </body>
 
 </html>

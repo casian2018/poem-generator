@@ -103,6 +103,27 @@ function generatePoem() {
 
 }
 
+
+generateBtn.addEventListener('click', generatePoem);
+
+const rollBtn = document.getElementById('roll-btn');
+
+function generateRandomPrompt() {
+  fetch('random.txt')
+    .then(response => response.text())
+    .then(data => {
+      const prompts = data.trim().split('\n');
+      const randomIndex = Math.floor(Math.random() * prompts.length);
+      const randomPrompt = prompts[randomIndex].trim();
+      promptInput.value = randomPrompt;
+    })
+    .catch(error => console.error(error));
+}
+
+rollBtn.addEventListener('click', generateRandomPrompt);
+
+
+
 generateBtn.addEventListener('click', generatePoem);
 
 function speach() {

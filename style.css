@@ -8,52 +8,61 @@
   scroll-padding-top: 2rem;
   font-family: "Roboto", sans-serif;
 }
+
 :root {
   --main-color: #033a80;
   --bg-color: #EEEEEE;
-  --bg:#FFF;
+  --bg: #FFF;
   --text-color: #0f0c27;
   --hover: hsl(260, 100%, 51%);
- 
+
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
 }
 
-.active section{
+.active section {
   background-color: #0f0c27;
   color: #fff;
+  margin-top: 50px;
 }
 
 section {
   background-color: white;
   border-radius: 15px;
   width: 900px;
+  margin-top: 50px;
 }
+
 body.active {
   --text-color: #fff;
   --bg-color: #23184b;
 }
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  
+
 }
+
 *::selection {
   color: var(--bg-color);
   background: var(--main-color);
 }
+
 .heading {
   text-align: center;
 }
+
 .heading h2 {
   font-size: 30px;
 }
- 
+
 .heading span {
   font-size: var(--p-font);
   color: rgb(2, 166, 70);
 }
+
 header {
   background-color: var(--bg);
   position: fixed;
@@ -67,23 +76,26 @@ header {
   padding: 13px 10%;
   transition: 0.2s;
   box-shadow: -3px -3px 7px #ffffff73,
-				2px 2px 5px rgba(94, 104, 121, 0.288);
+    2px 2px 5px rgba(94, 104, 121, 0.288);
 }
+
 header.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
+
 .logo {
   font-size: 1.61rem;
   font-weight: 600;
   color: var(--text-color);
 }
+
 .navbar {
   display: flex;
 }
 
-.active header{
+.active header {
 
-  background-color: #0f0c27; 
+  background-color: #0f0c27;
 }
 
 #menu-icon {
@@ -92,6 +104,7 @@ header.shadow {
   z-index: 10001;
   display: none;
 }
+
 #darkmode {
   font-size: 22px;
   cursor: pointer;
@@ -100,112 +113,114 @@ header.shadow {
 
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    border: 1px solid transparent;
-    background-color: transparent;
-    border-radius: 15px;
-    margin-left: 40%;
-  
-  }
-  
-  .form-container {
-    width: 600px;
-    margin-top: 5%;
-    text-align: center;
-  
-  }
-  
-  select {
-    width: 400px;
-    height: 30px;
-    font-size: 16px;
-    padding: 5px;
-    margin-left: 27%;
-  
-  }
-  
-  .active input {
-    width: 400px;
-    height: 40px;
-    font-size: 16px;
-    padding: 5px;
-    border: 2px solid #ccc;
-    margin-top: 3%;
-    margin-left:27%;
-    color : #fff;
-    background-color: #0f0c27;
-  }
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-left: 40%;
 
-  input{
-    width: 400px;
-    height: 40px;
-    font-size: 16px;
-    padding: 5px;
-    border: 2px solid #ccc;
-    margin-top: 3%;
-    margin-left:27%;
-    border-radius: 5px;
-  }
-  
-  
-  button {
-    background-color: #bcbac4;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-left: 25px;
-  
-  
-  }
-  
-  button:hover {
-    background-color: #9d9ba3;
-  }
-  
-  .genpoem {
-    margin-left: 41%;
-    margin-top: 2%;
-  }
-  
-  #poem-container {
-    font-size: 20px;
-    line-height: 1.5;
-    width: fit-content;
-    text-align: center;
-    margin-left: 3%;
-    margin-top: 1%;
-  
-  }
-  img{
-    margin-top: 7%;
-  }
-  
-  .img img {
-    width: 256px;
-    margin-left: 510px;
-    border-radius: 5px;
-    position: absolute;
-  }
-  
-  .fin {
-    border-radius: 15px;
-    margin-top: 10%;
-    margin-left: 35%;
-    
-  
-  }
-  .inlinebtn{
-    display:inline-block;
-    margin-bottom: 2%;
-  }
-  
-  .space{
-    margin-top:20%;
-  }
+}
+
+.form-container {
+  width: 600px;
+  margin-top: 5%;
+  text-align: center;
+
+}
+
+select {
+  width: 400px;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 27%;
+
+}
+
+.active input {
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  margin-top: 3%;
+  margin-left: 27%;
+  color: #fff;
+  background-color: #0f0c27;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  margin-top: 3%;
+  margin-left: 27%;
+  border-radius: 5px;
+}
+
+
+button {
+  background-color: #bcbac4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 25px;
+
+
+}
+
+button:hover {
+  background-color: #9d9ba3;
+}
+
+.genpoem {
+  margin-left: 41%;
+  margin-top: 2%;
+}
+
+#poem-container {
+  font-size: 20px;
+  line-height: 1.5;
+  width: fit-content;
+  text-align: center;
+  margin-left: 3%;
+  margin-top: 1%;
+
+}
+
+img {
+  margin-top: 7%;
+}
+
+.img img {
+  width: 256px;
+  margin-left: 510px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.fin {
+  border-radius: 15px;
+  margin-top: 10%;
+  margin-left: 35%;
+
+
+}
+
+.inlinebtn {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.space {
+  margin-top: 20%;
+}
 
 /* Making Responsive */
 @media (max-width: 991px) {
@@ -213,24 +228,29 @@ h1 {
     padding: 18px 4%;
   }
 }
+
 @media (max-width: 881px) {
   :root {
     --big-font: 2.7rem;
     --medium-font: 1.4rem;
   }
 }
+
 @media (max-width: 768px) {
   :root {
     --big-font: 2.4rem;
     --medium-font: 1.2rem;
   }
+
   header {
     padding: 11px 4%;
   }
+
   #menu-icon {
     display: initial;
     color: var(--text-color);
   }
+
   header .navbar {
     position: absolute;
     top: -500px;
@@ -243,19 +263,23 @@ h1 {
     transition: 0.2s ease;
     text-align: center;
   }
+
   .navbar.active {
     top: 100%;
   }
+
   .navbar a {
     padding: 1.5rem;
     display: block;
     background: var(--bg-color);
   }
+
   #darkmode {
     position: absolute;
     top: 1.4rem;
     right: 2rem;
   }
+
   .scroll-down {
     display: none;
   }
@@ -264,7 +288,7 @@ h1 {
 
 @media (max-height: 700px) {
 
-  section{
+  section {
 
     margin-top: 15%;
     width: 800px;
@@ -279,13 +303,13 @@ h1 {
 
 @media (max-width: 960px) {
 
-  section{
+  section {
 
     margin-top: 15%;
     width: 700px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 50%;
@@ -296,13 +320,13 @@ h1 {
 
 @media (max-width: 812px) {
 
-  section{
+  section {
 
     margin-top: 15%;
     width: 700px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 57%;
@@ -313,274 +337,274 @@ h1 {
 
 @media (max-width: 660px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 500px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 30%;
     margin-top: 120%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 25%;
   }
 
-  input{
+  input {
 
     margin-left: 10%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 26%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 590px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 25%;
     margin-top: 123%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 6%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 23%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 567px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 28%;
     margin-top: 126%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 6%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 23%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 553px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 28%;
     margin-top: 129%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 6%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 23%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 539px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 28%;
     margin-top: 134%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 6%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 23%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 517px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 28%;
     margin-top: 148%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 6%;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 23%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
 
 @media (max-width: 472px) {
 
-  section{
+  section {
 
     margin-top: 25%;
     width: 450px;
   }
 
-  .img img{
+  .img img {
 
     width: 180px;
     margin-left: 28%;
     margin-top: 153%;
   }
 
-  .fin{
+  .fin {
 
     margin-top: 60%;
     margin-left: 20%;
   }
 
-  input{
+  input {
 
     margin-left: 14%;
     width: 300px;
   }
 
-  #poem-container{
+  #poem-container {
 
     margin-left: 20%;
   }
 
-  .genpoem{
+  .genpoem {
 
     margin-left: 35%;
   }
 
-  
+
 }
