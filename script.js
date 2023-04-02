@@ -38,7 +38,7 @@ let thepoemidkurenameit = "";
 
 function generatePoem() {
   const apiUrl = 'https://api.openai.com/v1/completions';
-  const apiKey = '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';
+  const apiKey = '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';
 
   const prompt = "translate " + promptInput.value + " in english then make a poem in about 100 words";
   console.log(prompt)
