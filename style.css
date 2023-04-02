@@ -21,6 +21,13 @@
   --p-font: 0.941rem;
 }
 
+.loading{
+
+  margin-right: -390%;
+}
+
+
+
 .active section {
   background-color: #0f0c27;
   color: #fff;
@@ -585,13 +592,11 @@ img {
   }
 
   .fin {
-
     margin-top: 60%;
     margin-left: 20%;
   }
 
   input {
-
     margin-left: 14%;
     width: 300px;
   }
@@ -605,6 +610,5 @@ img {
 
     margin-left: 35%;
   }
-
 
 }
