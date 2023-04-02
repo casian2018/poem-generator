@@ -10,183 +10,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="style.css" />
+
+
+
 </head>
 
-<body>
-  <center>
-    <div class="box">
+<body class="">
 
-      <h1>Poem Generator</h1>
-      <div class="form-container">
-        <div class="text">
-          <h1>Poem Topic :</h1>
-        </div>
-        <input type="text" id="prompt">
-        <div class="text">
+  <style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+  </style>
 
-          <a href="https://www.penguin.co.uk/articles/childrens-article/different-types-of-poetry-for-kids">No
-            inspiration ?</a>
+  <header>
+    <a href="#" class="logo">Poemy</a>
 
-          <h1>Language :</h1>
-        </div>
-        <select id="voci">
+    <div class="bx bx-menu" id="menu-icon"></div>
 
-        </select>
-        <select id="limbi">
-          <option value="English">English</option>
-          <option value="Afrikaans">Afrikaans</option>
-          <option value="Albanian">Albanian</option>
-          <option value="Amharic">Amharic</option>
-          <option value="Arabic">Arabic</option>
-          <option value="Armenian">Armenian</option>
-          <option value="Assamese">Assamese</option>
-          <option value="Azerbaijani">Azerbaijani</option>
-          <option value="Basque">Basque</option>
-          <option value="Belarusian">Belarusian</option>
-          <option value="Bengali">Bengali</option>
-          <option value="Bosnian">Bosnian</option>
-          <option value="Bulgarian">Bulgarian</option>
-          <option value="Burmese">Burmese</option>
-          <option value="Catalan">Catalan</option>
-          <option value="Cebuano">Cebuano</option>
-          <option value="Chichewa">Chichewa</option>
-          <option value="Chinese">Chinese</option>
-          <option value="Corsican">Corsican</option>
-          <option value="Croatian">Croatian</option>
-          <option value="Czech">Czech</option>
-          <option value="Danish">Danish</option>
-          <option value="Dutch">Dutch</option>
-          <option value="English">English</option>
-          <option value="Esperanto">Esperanto</option>
-          <option value="Estonian">Estonian</option>
-          <option value="Filipino">Filipino</option>
-          <option value="Finnish">Finnish</option>
-          <option value="French">French</option>
-          <option value="Frisian">Frisian</option>
-          <option value="Galician">Galician</option>
-          <option value="Georgian">Georgian</option>
-          <option value="German">German</option>
-          <option value="Greek">Greek</option>
-          <option value="Gujarati">Gujarati</option>
-          <option value="Haitian Creole">Haitian Creole</option>
-          <option value="Hausa">Hausa</option>
-          <option value="Hawaiian">Hawaiian</option>
-          <option value="Hebrew">Hebrew</option>
-          <option value="Hindi">Hindi</option>
-          <option value="Hmong">Hmong</option>
-          <option value="Hungarian">Hungarian</option>
-          <option value="Icelandic">Icelandic</option>
-          <option value="Igbo">Igbo</option>
-          <option value="Indonesian">Indonesian</option>
-          <option value="Irish">Irish</option>
-          <option value="Italian">Italian</option>
-          <option value="Japanese">Japanese</option>
-          <option value="Javanese">Javanese</option>
-          <option value="Kannada">Kannada</option>
-          <option value="Kazakh">Kazakh</option>
-          <option value="Khmer">Khmer</option>
-          <option value="Kinyarwanda">Kinyarwanda</option>
-          <option value="Kirundi">Kirundi</option>
-          <option value="Korean">Korean</option>
-          <option value="Kurdish">Kurdish</option>
-          <option value="Kyrgyz">Kyrgyz</option>
-          <option value="Lao">Lao</option>
-          <option value="Latin">Latin</option>
-          <option value="Latvian">Latvian</option>
-          <option value="Lithuanian">Lithuanian</option>
-          <option value="Luxembourgish">Luxembourgish</option>
-          <option value="Macedonian">Macedonian</option>
-          <option value="Malagasy">Malagasy</option>
-          <option value="Malay">Malay</option>
-          <option value="Malayalam">Malayalam</option>
-          <option value="Maltese">Maltese</option>
-          <option value="Maori">Maori</option>
-          <option value="Marathi">Marathi</option>
-          <option value="Mongolian">Mongolian</option>
-          <option value="Montenegrin">Montenegrin</option>
-          <option value="Nepali">Nepali</option>
-          <option value="Norwegian">Norwegian</option>
-          <option value="Odia">Odia</option>
-          <option value="Pashto">Pashto</option>
-          <option value="Persian">Persian</option>
-          <option value="Polish">Polish</option>
-          <option value="Portuguese">Portuguese</option>
-          <option value="Punjabi">Punjabi</option>
-          <option value="Romanian">Romanian</option>
-          <option value="Russian">Russian</option>
-          <option value="Samoan">Samoan</option>
-          <option value="Scots Gaelic">Scots Gaelic</option>
-          <option value="Serbian">Serbian</option>
-          <option value="Sesotho">Sesotho</option>
-          <option value="Shona">Shona</option>
-          <option value="Sindhi">Sindhi</option>
-          <option value="Sinhala">Sinhala</option>
-          <option value="Slovak">Slovak</option>
-          <option value="Slovenian">Slovenian</option>
-          <option value="Somali">Somali</option>
-          <option value="Spanish">Spanish</option>
-          <option value="Sundanese">Sundanese</option>
-          <option value="Swahili">Swahili</option>
-          <option value="Swedish">Swedish</option>
-          <option value="Tajik">Tajik</option>
-          <option value="Tamil">Tamil</option>
-          <option value="Tatar">Tatar</option>
-          <option value="Telugu">Telugu</option>
-          <option value="Thai">Thai</option>
-          <option value="Turkish">Turkish</option>
-          <option value="Turkmen">Turkmen</option>
-          <option value="Ukrainian">Ukrainian</option>
-          <option value="Urdu">Urdu</option>
-          <option value="Uyghur">Uyghur</option>
-          <option value="Uzbek">Uzbek</option>
-          <option value="Vietnamese">Vietnamese</option>
-          <option value="Welsh">Welsh</option>
-          <option value="Xhosa">Xhosa</option>
-          <option value="Yiddish">Yiddish</option>
-          <option value="Yoruba">Yoruba</option>
-          <option value="Zulu">Zulu</option>
-        </select>
-        <select id="poem-style">
-          <option value="funny">Funny</optio>
-          <option value="professional">Professional</option>
-          <option value="love">Love</option>
-          <option value="ballad">Ballad</option>
-          <option value="villanelle">Villanelle</option>
-          <option value="Free Verse">Free Verse</option>
-        </select>
-        <select id="rime">
-          <option value="End Rhymes">End Rhymes</option>
-          <option value="Internal Rhymes">Internal Rhymes</option>
-          <option value="Slant Rhymes">Slant Rhymes</option>
-          <option value="Rich Rhymes">Rich Rhymes</option>
-          <option value="Eye Rhymes">Eye Rhymes</option>
-          <option value="Identical Rhymes">Identical Rhymes</option>
-        </select>
-          <button id="generate-btn">Generate Poem</button>
-      <center>
-        <div id="poem-container"></div>
-        <img id="image" />
-        <script src="script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-      </center>
-      <div class="fin">
-        <button id="save-pdf-btn">Save as PDF</button>
-        <button id="save-txt-btn">Save as TXT</button>
+    <ul class="navbar">
+      <div class="bx bx-moon" id="darkmode"></div>
+    </ul>
+  </header>
 
-        <div class="wrapper">
-          <form>
-            <button id="speechBtn">Convert To Speech</button>
+  <div class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5" class="box">
+      <section>
+      <div class="w-full " class="box">
+        <div class="topic">
+          <input type="text" id="prompt" placeholder="  Write keyword + language">
+          <br>
+          <button id="generate-btn" class="genpoem">Generate Poem</button>
+          <div>
+
+            <div class="img"><img id="image" /></div>
+
+            <div>
+              <div id="poem-container"><br><br><br><br>The text and image will load here..<br><br><br><br></div>
+            </div>
+
+          </div>
+
+          <div class="fin">
+            <div class="inlinebtn">
+              <button id="speechSynthesis">Read</button>
+            </div>
+
+            <div class="inlinebtn">
+              <button id="save-txt-btn">Save as TXT</button>
+            </div>
+
+
+          </div>
+
           </form>
+
         </div>
-      </div>
+    </section>
+    </div>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-      </form>
-
-
-  </center>
 
 </body>
+
 </html>

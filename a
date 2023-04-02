@@ -10,8 +10,7 @@
 }
 :root {
   --main-color: #033a80;
-  --bg-color: #EEEEEE;
-  --bg:#FFF;
+  --bg-color: #fff;
   --text-color: #0f0c27;
   --hover: hsl(260, 100%, 51%);
  
@@ -19,20 +18,12 @@
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
 }
-
-.active section{
-  background-color: #0f0c27;
-  color: #fff;
-}
-
 section {
-  background-color: white;
-  border-radius: 15px;
-  width: 900px;
+  padding: 50px 10%;
 }
 body.active {
   --text-color: #fff;
-  --bg-color: #23184b;
+  --bg-color: #0f0c27;
 }
 body {
   background: var(--bg-color);
@@ -54,7 +45,6 @@ body {
   color: rgb(2, 166, 70);
 }
 header {
-  background-color: var(--bg);
   position: fixed;
   width: 100%;
   top: 0;
@@ -63,6 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: var(--bg-color);
   padding: 13px 10%;
   transition: 0.2s;
   box-shadow: -3px -3px 7px #ffffff73,
@@ -79,12 +70,15 @@ header.shadow {
 .navbar {
   display: flex;
 }
-
-.active header{
-
-  background-color: #0f0c27; 
+.navbar a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
 }
-
+.navbar a:hover {
+  color: var(--hover);
+}
 #menu-icon {
   font-size: 24px;
   cursor: pointer;
@@ -95,8 +89,6 @@ header.shadow {
   font-size: 22px;
   cursor: pointer;
 }
-
-
 
 h1 {
     font-size: 3rem;
@@ -124,45 +116,32 @@ h1 {
   
   }
   
-  .active input {
+  input {
     width: 400px;
-    height: 40px;
+    height: 30px;
     font-size: 16px;
     padding: 5px;
-    border: 2px solid #ccc;
-    margin-top: 3%;
-    margin-left:27%;
-    color : #fff;
-    background-color: #0f0c27;
-  }
-
-  input{
-    width: 400px;
-    height: 40px;
-    font-size: 16px;
-    padding: 5px;
-    border: 2px solid #ccc;
-    margin-top: 3%;
-    margin-left:27%;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 27%;
+  
+  
   }
   
   
   button {
-    background-color: #bcbac4;
+    background-color: #4caf50;
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-left: 25px;
   
   
   }
   
   button:hover {
-    background-color: #9d9ba3;
+    background-color: #3e8e41;
   }
   
   .genpoem {
@@ -193,7 +172,7 @@ h1 {
   .fin {
     border-radius: 15px;
     margin-top: 10%;
-    margin-left: 35%;
+    margin-left: 38%;
     
   
   }

@@ -1,16 +1,43 @@
 const generateBtn = document.getElementById('generate-btn');
 const promptInput = document.getElementById('prompt');
-const limbiInput = document.getElementById('limbi');
-const poemstyleInput = document.getElementById('poem-style');
-const vociInput = document.getElementById('voci');
+const languageInput = document.getElementById('language');
 const poemContainer = document.getElementById('poem-container');
+const speachBtn = document.getElementById('speechSynthesis');
 
+let header = document.querySelector('header');
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+
+
+menu.onclick = () => {
+  navbar.classList.toggle('active');
+}
+window.onscroll = () => {
+  navbar.classList.remove('active');
+}
+
+// Dark Mode
+let darkmode = document.querySelector('#darkmode');
+
+darkmode.onclick = () => {
+  if (darkmode.classList.contains('bx-moon')) {
+    darkmode.classList.replace('bx-moon', 'bx-sun');
+    document.body.classList.add('active');
+  } else {
+    darkmode.classList.replace('bx-sun', 'bx-moon');
+    document.body.classList.remove('active');
+  }
+
+}
+
+let thepoemidkurenameit = "";
 
 function generatePoem() {
   const apiUrl = 'https://api.openai.com/v1/completions';
   const apiKey = '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';
 
-  const prompt = "Write a poetry entire in about 150 words about " + promptInput.value + " in " + limbiInput.value + " in a " + poemstyleInput.value + " style using the " + vociInput.value + " rhymes";
+  const prompt = "Write a poetry about " + promptInput.value;
   console.log(prompt)
   const payload = {
     model: "text-davinci-003",
@@ -19,11 +46,9 @@ function generatePoem() {
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 250,
+    max_tokens: 500,
     n: 1,
   };
-
-  let poem = '';
 
   fetch(apiUrl, {
     method: 'POST',
@@ -36,24 +61,20 @@ function generatePoem() {
     .then(response => response.json())
     .then(data => {
       if (data.choices && data.choices.length > 0) {
-        poem = data.choices[0].text.replace(/\n/g, "<br/>");
+        const poem = data.choices[0].text.replace(/\n/g, "<br/>");
+        thepoemidkurenameit = data.choices[0].text.trim();
         poemContainer.innerHTML = poem;
-        const savePdfBtn = document.querySelector('#save-pdf-btn');
-        const saveTxtBtn = document.querySelector('#save-txt-btn');
-
-        if (savePdfBtn && saveTxtBtn) {
-          savePdfBtn.addEventListener('click', () => {
-            // your code for saving as PDF
-          });
-
-          saveTxtBtn.addEventListener('click', () => {
-            // your code for saving as TXT
-          });
-        }
-        } else {
-          console.error('Could not find save buttons.');
-        } 
-      })
+        // Save as TXT
+        const saveTxtBtn = document.getElementById('save-txt-btn');
+        saveTxtBtn.addEventListener('click', () => {
+          const txt = poem.replace(/<br\/>/g, "\n");
+          const blob = new Blob([txt], { type: "text/plain;charset=utf-8" });
+          saveAs(blob, "poem.txt");
+        });
+      } else {
+        poemContainer.innerHTML = "Sorry, we couldn't generate a poem. Please try again later.";
+      }
+    })
     .catch(error => console.error(error));
 
   var imgElement = document.getElementById('image');
@@ -68,7 +89,7 @@ function generatePoem() {
       'model': 'image-alpha-001',
       'prompt': promptInput.value,
       'num_images': 1,
-      'size': '1024x1024'
+      'size': '256x256'
     })
   })
     .then(response => response.json())
@@ -79,60 +100,31 @@ function generatePoem() {
 
 }
 
-const textarea = poemContainer;
-voiceList = document.querySelector("select"),
-  speechBtn = document.querySelector("speechBtn");
+generateBtn.addEventListener('click', generatePoem);
 
-let synth = speechSynthesis,
-  isSpeaking = true;
 
-voices();
+function speach() {
+  // speechSynthesis
+  // check if the Web Speech API is supported in the browser
+  if ('speechSynthesis' in window) {
+    // create a new SpeechSynthesisUtterance object
+    var utterance = new SpeechSynthesisUtterance();
 
-function voices() {
-  for (let voice of synth.getVoices()) {
-    let selected = voice.name === "Google US English" ? "selected" : "";
-    let option = `<option value="${voice.name}" ${selected}>${voice.name} (${voice.lang})</option>`;
-    voiceList.insertAdjacentHTML("beforeend", option);
+    // set the text to be spoken
+    utterance.text = thepoemidkurenameit;
+
+    // use the default voice
+    utterance.voice = speechSynthesis.getVoices()[0];
+
+    // speak the text
+    speechSynthesis.speak(utterance);
+  } else {
+    console.log("Sorry, the Web Speech API is not supported in your browser.");
   }
 }
 
-synth.addEventListener("voiceschanged", voices);
-
-function textToSpeech(text) {
-  let utterance = new SpeechSynthesisUtterance(text);
-  for (let voice of synth.getVoices()) {
-    if (voice.name === voiceList.value) {
-      utterance.voice = voice;
-    }
-  }
-  synth.speak(utterance);
-}
-
-speechBtn.addEventListener("click", e => {
-  e.preventDefault();
-  if (textarea.value !== "") {
-    if (!synth.speaking) {
-      textToSpeech(textarea.value);
-    }
-    if (textarea.value.length() > 80) {
-      setInterval(() => {
-        if (!synth.speaking && !isSpeaking) {
-          isSpeaking = true;
-          speechBtn.innerText = "Convert To Speech";
-        } else {
-        }
-      }, 500);
-      if (isSpeaking) {
-        synth.resume();
-        isSpeaking = false;
-        speechBtn.innerText = "Pause Speech";
-      } else {
-        synth.pause();
-        isSpeaking = true;
-        speechBtn.innerText = "Resume Speech";
-      }
-    } else {
-      speechBtn.innerText = "Convert To Speech";
-    }
-  }
+speachBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  speach();
 });
+
