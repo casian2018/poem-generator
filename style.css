@@ -51,6 +51,19 @@ body {
   color: var(--text-color);
 
 }
+.active button{
+  background-color: #3f0470;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+.active button:hover {
+  background-color: #300652;
+}
 
 *::selection {
   color: var(--bg-color);
@@ -170,7 +183,7 @@ input {
 
 
 button {
-  background-color: #bcbac4;
+  background-color: #cf3535;
   color: white;
   font-size: 16px;
   border: none;
@@ -183,11 +196,15 @@ button {
 }
 
 button:hover {
-  background-color: #9d9ba3;
+  background-color: #b62c2c;
 }
 
 .genpoem {
-  margin-left: 41%;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+.active .genpoem {
+  margin-left: 40%;
   margin-top: 2%;
 }
 
